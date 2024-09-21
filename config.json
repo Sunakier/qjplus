@@ -1,0 +1,60 @@
+{
+  "browersEnv": {
+    "browerPath": "./chromium/vchrome.exe",
+    "webDriver": "./chromium/chromedriver.exe",
+    "cachesPath": "../../caches/",
+    "startDelay": 200
+  },
+  "proxy": {
+    "proxy": null,
+    "onlyProxyLogin": true,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+  },
+  "app": {
+    "maximumBrowers": 3,
+    "maximumThread": 3,
+    "studentList": "./user.xls",
+    "needFinishCourses": {
+      "needFinishNum": 2,
+      "willFinishListIfLess": {
+        "五年级": [
+          "1824",
+          "1825"
+        ],
+        "六年级": [
+          "1826",
+          "1827"
+        ],
+        "初一": [
+          "1842",
+          "1855"
+        ],
+        "初二": [
+          "1840",
+          "1841"
+        ],
+        "初三": [
+          "1838",
+          "1839"
+        ],
+        "高一": [
+          "1836",
+          "1837"
+        ],
+        "高二": [
+          "1834",
+          "1835"
+        ],
+        "中职一": [
+          "1848",
+          "1849"
+        ],
+        "中职二": [
+          "1850",
+          "1851"
+        ]
+      }
+    }
+  }
+}
+
