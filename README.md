@@ -1,54 +1,50 @@
-# qjplus
+# qjplus v4-202510
 
-Python 实现的基于 selenium 浏览器的青骄第二课堂自动化解决方案
+Python 实现的基于 DrissionPage 浏览器自动化 + 协议实现的 青骄第二课堂自动化解决方案  
+本项目是一个 v3 的重构版本
 
-## 写在开头
+## 如何使用
 
-这是我自己需要完成的简单实现，仅供参考，如果你只需要完成任务，**我随缘接单**，你可以在下面的 **"联络我"** 板块与我取得联系，我可以提供**相对优于市面**的价格
+1. **安装依赖**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 功能
+2. **配置**:
+   - 根据需要修改 `config/config.json` 文件中的配置，其中 `browser_path` 、 `user_data_files` 和 `willFinishListIfLess` 应被格外注意
 
-- [x] 基于 selenium 控制的浏览器的自动登录
-- [x] ~~基于协议的自动登录 (阿里云无感验证227支持 非开源内容)~~
-- [x] 自动刷课时
-- [x] 登录和刷课时的多线程实现
-- [x] ~~批量代理支持 (非开源内容)~~
-- [x] ~~用于知识竞赛的自动化题库搜集 (无意义功能)~~
-- [x] ~~基于题库的知识竞赛 (官方此内容已取消)~~
+3. **准备用户数据**:
+   - 将包含用户账号信息（学生姓名、账号、密码、年级）的表格文件（.xls, .xlsx, .csv）放入 `user_data_files` 指定的目录中。
 
-## 说明
+4. **运行**:
+   ```bash
+   python src/main.py
+   ```
 
-1. 支持xls,xlsx,xlsb,csv等格式导入 (依赖于库pyexcel-xls pyexcel-xlsx pyexcel-xlsb), 但是使用xls你可以获得更快(成倍)的表格数据加载速度(Vxls>Vcsv>Vxlsx)
+## 项目结构
 
-2. 支持年级处简单纠错以及数字传入, 你传入标准的年级文本或者号码都可以, 但是仍然推荐传入纯数字
-
-   > 五年级(5) 六年级(6) 七年级(7) 八年级(8) 九年级(9) 高一(10) 高二(11) 中职一(12) 中职二(13)
-
-   以及下面的写法都是可以识别的, 至于这个为什么呢, 别问, 问就是有原因的
-
-   > 九年纪 九年 小五 中1 初2 职2 业二
-
-3. 传入表格请按照 以下 格式传入, 姓名为非必填项
-
-   > *姓名 账号 密码 年级
-
-4. 对于需要完整指定课程、课时量、使用自定义的浏览器、使用自定义的浏览器驱动等等内容，请按照自己的理解来修改配置文件 config.json
-
-5. 关于使用的浏览器驱动, 你可以使用自己喜欢的浏览器和驱动, 我使用的是魔改的 chromium, 由于仓库体积, 请自行下载并且在配置文件中配置
-
-6. 陈旧代码年久失修，原理简单，介意请**自己实现**，此版本为v3，v4正在进行中
-
-## TODO
-
-1. 允许用户引入自实现的其他登录方式来完成登录的无感验证
-2. 更加友好的调用逻辑
-3. 奇奇怪怪错误的处理
-4. ~~WebUI和全自动化 (v4)~~
-5. ~~API 和集群 (v4)~~
+```
+.
+├── config/               # 配置文件目录
+├── logs/                 # 日志文件目录
+├── src/                  # 源代码目录
+│   ├── browser_manager.py
+│   ├── config_manager.py
+│   ├── data_processor.py
+│   ├── login_manager.py
+│   ├── log_manager.py
+│   ├── main.py
+│   ├── report_generator.py
+│   ├── task_manager.py
+│   └── utils.py
+├── tests/                # 测试代码目录
+├── users/                # 用户数据目录
+├── README.md
+└── requirements.txt
 
 ## 联络我
 
-Bilbili 演示视频(非使用教程):
+Bilbili 演示视频(v3):
 
 [BV1mP411N7Qe](https://www.bilibili.com/video/BV1mP411N7Qe)
 
@@ -56,6 +52,6 @@ Bilbili 演示视频(非使用教程):
 
 Mail: [lazyerpaper@qq.com](mailto:lazyerpaper@qq.com)
 
-WeChat: wuqibor
+WeChat: lazyerpaper
 
 Telegram: [Wuqibor](https://t.me/Wuqibor)

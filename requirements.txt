@@ -1,7 +1,7 @@
+rich
+DrissionPage
+pandas
 requests
-selenium
-openpyxl==3.0.10
 pyexcel
-pyexcel-xls
-pyexcel-xlsx
-pyexcel-xlsb
+openpyxl
+xlrd

@@ -1,0 +1,50 @@
+{
+  "app_settings": {
+    "max_browsers": 3,
+    "login_threads": 3,
+    "processing_threads": 3,
+    "user_data_files": "./users/",
+    "report_path": "./report/"
+  },
+  "browser_settings": {
+    "browser_path": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "cache_path": "../browser_cache",
+    "start_delay_ms": 200,
+    "max_usage_per_instance": 5,
+    "browser_start_timeout": 60
+  },
+  "task_settings": {
+    "min_finished_courses": 5,
+    "courses_to_finish": {
+      "五年级": ["2075", "2076", "2079", "2097", "2098"],
+      "六年级": ["2077", "2078", "2080","2095", "2096"],
+      "初一": ["2093", "2106"],
+      "初二": ["2091", "2092"],
+      "初三": ["2089", "2090"],
+      "高一": ["2087", "2088"],
+      "高二": ["2085", "2086"],
+      "中职一": ["2099", "2100"],
+      "中职二": ["2101", "2102"]
+    }
+  },
+  "retry_settings": {
+    "login_task": {
+      "max_retries": 10,
+      "delay_seconds": 1
+    },
+    "processing_task": {
+      "max_retries": 10,
+      "delay_seconds": 1
+    }
+  },
+  "network_settings": {
+    "proxy": null,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+  },
+  "logging_settings": {
+    "log_level": "INFO",
+    "log_to_console": true,
+    "log_to_file": true,
+    "log_file_path": "logs/app.log"
+  }
+}
